@@ -1,31 +1,25 @@
 var express = require('express');
 
 var routes = function (Pet) {
+
     var petRouter = express.Router();
+    var petController = require('../controllers/petController')(Pet);
+
     petRouter.route('/pets')
-        .get(function (req, res) {
-            Pet.find(function (err, pets) {
-                if (err)
-                    res.status(500).send(err);
-                else
-                    res.json(pets);
-            });
-        });
+        .get(petController.getAll);
     petRouter.route('/pet')
-        .post(function (req, res) {
-            var pet = new Pet(req.body);
-            pet.save();
-            res.status(201).send(pet);
-        });
+        .post(petController.post);
+    /**
+     * middleware for all the pet requests with id specified
+     */
+    petRouter.use('/pet/:id', petController.get);
+
     petRouter.route('/pet/:id')
         .get(function (req, res) {
-            Pet.findById(req.params.id, function (err, pet) {
-                if (err)
-                    res.status(500).send(err);
-                else
-                    res.json(pet);
-            });
-        });
+            res.json(req.pet);
+        })
+        .put(petController.put)
+        .delete(petController.delete);
     return petRouter;
 };
 
