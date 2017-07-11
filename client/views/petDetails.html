@@ -1,0 +1,22 @@
+<a href="#!/pets">Go Back</a>
+<div class="panel panel-default" ng-init="getPet()">
+  <div class="panel-heading"><b> {{pet.Breed}}</b></div>
+  <div class="panel-body">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="list-group">
+                <li class="list-group-item">Breed:{{pet.Breed}}</li>
+                <li class="list-group-item">Age:{{pet.Age}}</li>
+                <li class="list-group-item">Name:{{pet.Name}}</li>
+                <li class="list-group-item">Price:{{pet.Price}}</li>
+                <li class="list-group-item">List Date:{{pet.ListDate}}</li>
+                <li class="list-group-item">Sale Date:{{pet.SaleDate}}</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="pull-right">
+    <a href="#!/pet/edit/{{pet._id}}">Edit</a> |
+    <a href="" ng-click="removeBook(pet._id)">Delete</a>
+</div>

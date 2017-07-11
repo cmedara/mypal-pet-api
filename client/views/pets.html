@@ -1,0 +1,34 @@
+<div class="panel panel-default" ng-init="getPets()">
+    <div class="panel-heading"> All Pets</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bs-example" data-example-id="simple-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Breed</th>
+                                <th>Age(months)</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>List Date</th>
+                                <th>Sale Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="pet in pets">
+                                <td>{{pet.Breed}}</td>
+                                <td>{{pet.Age}}</td>
+                                <td>{{pet.Name}}</td>
+                                <td>{{pet.Price}}</td>
+                                <td>{{pet.ListDate}}</td>
+                                <td>{{pet.SaleDate}}</td>
+                                <td><a class="btn btn-primary" href="#!/pet/details/{{pet._id}}">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+
+<div class="panel panel-default">
+    <div class="panel-heading"> Edit Pet</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form ng-submit="updatePet()" ng-init="getPet()">
+                    <div class="form-group">
+                        <label for="Breed">Breed</label>
+                        <input type="text" class="form-control" ng-model="pet.Breed" name="Breed" id="Breed" placeholder="Breed">
+                    </div>
+                    <div class="form-group">
+                        <label for="Age">Age(months)</label>
+                        <input type="text" class="form-control" ng-model="pet.Age" name="Age" id="Age" placeholder="Age">
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="number" class="form-control" ng-model="pet.Name" name="Name" id="Name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Price">Price</label>
+                        <input type="text" class="form-control" ng-model="pet.Price" name="Price" id="Price" placeholder="Price">
+                    </div>
+                    <div class="form-group">
+                        <label for="ListDate">ListDate</label>
+                        <input type="text" class="form-control" ng-model="pet.ListDate" name="ListDate" id="ListDate" placeholder="ListDate-YYYY-MM-DD">
+                    </div>
+                    <div class="form-group">
+                        <label for="SaleDate">SaleDate</label>
+                        <input type="text" class="form-control" ng-model="pet.SaleDate" name="SaleDate" id="SaleDate" placeholder="SaleDate-YYYY-MM-DD">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    jQuery(function () {
+        jQuery("#ListDate").datepicker({ dateFormat: "yy-mm-dd" });
+        jQuery("#SaleDate").datepicker({ dateFormat: "yy-mm-dd" });
+    });
+</script>
