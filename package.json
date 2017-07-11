@@ -1,0 +1,24 @@
+{
+  "name": "mypal-pet-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmedara/mypal-pet-api.get.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmedara/mypal-pet-api.get/issues"
+  },
+  "homepage": "https://github.com/cmedara/mypal-pet-api.get#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
+  }
+}
